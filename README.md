@@ -15,10 +15,12 @@ TODO:
 - [x] HTTP Propogation (propagating a trace ID), which I didn't think
       I'd need to manually enable. See [this code](https://github.com/zoidbergwill/tracing-example/commit/eeeb1ecbd488def16a4593a57eb0318042398444#diff-ab3e6505f8e871d26d09934adae619e0R27)
 - [ ] Integrations
-  - [x] DB: https://github.com/census-instrumentation/opencensus-python/issues/356
+  - [x] DB
+        [Census Related Issue](https://github.com/census-instrumentation/opencensus-python/issues/356)
   - [ ] Cache
   - [x] HTTP client
   - [ ] Celery integration: [Custom BaseTask](http://docs.celeryproject.org/en/latest/userguide/tasks.html#task-inheritance)
+        [Census Related Issue](https://github.com/census-instrumentation/opencensus-python/issues/357)
   - [ ] Kafka integration
 
 
