@@ -30,5 +30,11 @@ What it does so far:
         [Census Related Issue](https://github.com/census-instrumentation/opencensus-python/issues/357)
   - [ ] Kafka integration
 
+Tools:
+
+- [ ] logs
+- [ ] stats
+- [x] tracing: Zipkin integration
+
 If you have any suggestions for integrations or use cases to test,
 please feel free to [file an issue](https://github.com/zoidbergwill/tracing-example/issues/new)
