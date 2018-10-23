@@ -36,5 +36,7 @@ Tools:
 - [ ] stats
 - [x] tracing: Zipkin integration
 
+At the moment, we support tracing via the Zipkin exporter, which POSTs directly to Zipkin, but in a bigger scale system you might want something like exporting to Kafka or in the future [openensus-service](https://github.com/census-instrumentation/opencensus-service), which can write to Zipkin directly or Kafka, and can be scraped by Prometheus, which is very useful in a world with short-lived processes like Python or PHP.
+
 If you have any suggestions for integrations or use cases to test,
 please feel free to [file an issue](https://github.com/zoidbergwill/tracing-example/issues/new)
