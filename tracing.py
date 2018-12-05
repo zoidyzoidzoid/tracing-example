@@ -49,12 +49,12 @@ from opencensus.trace import span as span_module
 from opencensus.trace import execution_context
 from opencensus.trace.ext.django.middleware import OpencensusMiddleware
 
-
 # Based on https://github.com/opencensus-integrations/ocsql/blob/master/driver.go#L186
 # MODULE_NAME = 'sql'
 
 
 class CensusDBMiddleware(OpencensusMiddleware):
+
     def process_request(self, request):
         connection.execute_wrappers.append(self.trace_db_call)
         return super(CensusDBMiddleware, self).process_request(request)
@@ -76,10 +76,8 @@ class CensusDBMiddleware(OpencensusMiddleware):
             _span = _tracer.start_span()
             _span.name = '{}.query'.format(db_type)
             _span.span_kind = span_module.SpanKind.CLIENT
-            _tracer.add_attribute_to_current_span(
-                '{}.query'.format(db_type), sql)
-            _tracer.add_attribute_to_current_span(
-                '{}.cursor.method.name'.format(db_type), method_name)
+            _tracer.add_attribute_to_current_span('{}.query'.format(db_type), sql)
+            _tracer.add_attribute_to_current_span('{}.cursor.method.name'.format(db_type), method_name)
 
         result = execute(sql, params, many, context)
 
