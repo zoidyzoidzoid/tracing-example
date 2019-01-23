@@ -28,7 +28,9 @@ def home(request):
     else:
         headers = {}
     print(headers)
-    weather = requests.get('http://127.0.0.1:8081/', headers=headers).json()
+    response = requests.get('http://127.0.0.1:8081/', headers=headers)
+    response.raise_for_status()
+    weather = response.json()
     if isinstance(request.user, AnonymousUser):
         user = 'Not logged in.'
     else:
