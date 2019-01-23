@@ -38,7 +38,8 @@ def home(request):
     users_count = auth.get_user_model().objects.count()
     return JsonResponse(dict(
         message='Hello, World!',
-        weather=weather['data'],
+        weather_weather=weather['weather'][0],
+        weather_location=weather['name'],
         user=user,
         users_count=users_count,
     ))
