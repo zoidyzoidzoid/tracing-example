@@ -113,6 +113,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# celery settings
+
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+
+
 # census settings
 # https://github.com/census-instrumentation/opencensus-python#django
 INSTALLED_APPS.append('opencensus.trace.ext.django')
