@@ -10,7 +10,7 @@ certifi==2018.10.15
 chardet==3.0.4
 Cython==0.29
 decorator==4.3.0
-Django==2.1.2
+django>=2.1.5
 django-py-zipkin==1.0.0
 flake8==3.5.0
 google-api-core==1.5.0
