@@ -139,7 +139,7 @@ OPENCENSUS_TRACE_PARAMS = {
     'ZIPKIN_EXPORTER_HOST_NAME': 'localhost',
     'ZIPKIN_EXPORTER_PORT': 9411,
     'ZIPKIN_EXPORTER_PROTOCOL': 'http',
-    'TRANSPORT': 'opencensus.trace.exporters.transports.background_thread.BackgroundThreadTransport',
+    'TRANSPORT': 'opencensus.common.transports.async_.AsyncTransport',
 }
 
 from opencensus.trace import config_integration
